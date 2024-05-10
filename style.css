@@ -22,4 +22,116 @@ body{
     font-size: 1.3rem;
     font-family: "Barlow Semi Condensed", sans-serif;
     margin-block: 4rem;
+    scroll-behavior: smooth;
+}
+
+.grid-container {
+    margin-inline: 4.6rem;
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+}
+
+.boxes {
+    padding-inline: 3.5rem 3.3rem;
+    padding-block: 2.4rem 2.5rem;
+    border-radius: 0.8rem;
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.boxes:hover{
+    transform: scale(1.05);
+}
+
+.box-1{
+    background-color: var(--violet);
+    position: relative;
+}
+
+.box-2{
+    background-color: var(--gray);
+}
+
+.box-3, .box-5 {
+    background-color: var(--white);
+    color: #48556a;
+}
+
+.box-4{
+    background-color: var(--dark-gray);
+}
+
+.name-flex {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.name-flex{
+    margin-bottom: 1.7rem;
+}
+
+.name-flex img{
+    border-radius: 50%;
+    width: 4rem;
+}
+
+.para-content {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.box-1 p{
+    z-index: 999;
+    position: relative;
+}
+
+.para-content-2 {
+    opacity: 70%;
+    line-height: 1.8rem;
+}
+
+.verified {
+    opacity: 50%;
+}
+
+.pattern{
+    position: absolute;
+    top: 0%;
+    left: 60%;
+}
+
+/* Tablet Design */
+
+
+@media (min-width:580px) {
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .box-1, .box-4, .box-5{
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 800px){
+    .grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        margin-inline: auto;
+        margin-block: 20rem;
+    }
+
+   .box-3{
+    grid-row: 2;
+   }
+
+   .box-5{
+    grid-column: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+   }
+   
 }
