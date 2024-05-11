@@ -118,10 +118,18 @@ body{
 }
 
 @media (min-width: 800px){
+
+    .main-container {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+
     .grid-container{
         grid-template-columns: repeat(4, 1fr);
-        margin-inline: auto;
-        margin-block: 20rem;
+        /* margin-inline: auto;
+        margin-block: 20rem; */
+        
     }
 
    .box-3{
